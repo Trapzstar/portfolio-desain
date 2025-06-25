@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Desain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portofolio Desain Saya</h1>
+        <button id="multiLogo" title="Menu Multifungsi">☰</button>
+        <div id="multiMenu" class="multi-menu" style="display:none;">
+            <a href="#galeri">Galeri</a>
+            <a href="#kontak">Kontak</a>
+            <a href="#" onclick="window.location.reload()">Reload</a>
+        </div>
+        <div class="shortcut-btns">
+            <button id="downloadCV" title="Download CV">⬇️</button>
+            <button id="copyEmail" title="Copy Email">📧</button>
+            <button id="waBtn" title="WhatsApp">🟢</button>
+            <button id="printBtn" title="Print">🖨️</button>
+            <button id="refreshGallery" title="Refresh Galeri">🔄</button>
+        </div>
+        <button id="themeToggle" title="Ganti Tema">🌙/☀️</button>
+        <nav>
+            <a href="#produk">Produk</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+    <main>
+        <section id="produk">
+            <h2>Produk Unggulan</h2>
+            <div class="produk-grid">
+                <!-- Daftar produk akan ditampilkan di sini oleh script.js -->
+            </div>
+        </section>
+        <section id="galeri">
+            <h2>Galeri Desain</h2>
+            <div class="gallery">
+                <!-- Gambar desain akan ditampilkan di sini -->
+            </div>
+        </section>
+        <section id="testimoni">
+            <h2>Testimoni Klien</h2>
+            <div class="testi-slider">
+                <!-- Testimoni akan diisi oleh script.js -->
+            </div>
+        </section>
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <form>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <button id="bookingBtn" style="margin:24px auto 0 auto;display:block;background:#1976d2;color:#fff;border:none;border-radius:6px;padding:12px 28px;font-size:1rem;font-weight:600;cursor:pointer;">Booking Jadwal</button>
+        </section>
+    </main>
+    <div id="bookingModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:4001;background:rgba(25,118,210,0.13);align-items:center;justify-content:center;">
+        <form id="bookingForm" style="background:#fff;padding:32px 28px;border-radius:16px;box-shadow:0 4px 32px rgba(25,118,210,0.18);max-width:340px;width:90vw;position:relative;">
+            <button type="button" id="closeBooking" style="position:absolute;top:10px;right:16px;font-size:22px;background:none;border:none;color:#1976d2;cursor:pointer;">&times;</button>
+            <h3 style="margin-bottom:18px;color:#1976d2;">Booking Jadwal Konsultasi</h3>
+            <label for="bookingNama">Nama</label>
+            <input type="text" id="bookingNama" name="bookingNama" required style="margin-bottom:10px;width:100%;padding:8px;">
+            <label for="bookingTanggal">Tanggal</label>
+            <input type="date" id="bookingTanggal" name="bookingTanggal" required style="margin-bottom:10px;width:100%;padding:8px;">
+            <label for="bookingJam">Jam</label>
+            <input type="time" id="bookingJam" name="bookingJam" required style="margin-bottom:18px;width:100%;padding:8px;">
+            <button type="submit" style="background:#1976d2;color:#fff;border:none;border-radius:6px;padding:10px 24px;font-size:1rem;font-weight:600;cursor:pointer;">Kirim Booking</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Portofolio Desain Saya</p>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://dribbble.com" target="_blank">Dribbble</a> |
+            <a href="https://behance.net" target="_blank">Behance</a>
+        </div>
+    </footer>
+    <button id="backToTop" title="Kembali ke atas">⬆️</button>
+    <div id="notif" class="notif" style="display:none;">Pesan berhasil dikirim!</div>
+    <button id="funModeBtn" title="Mode Fun" style="position:fixed;bottom:30px;left:30px;z-index:2001;opacity:0.5;background:#1976d2;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;transition:opacity 0.2s;">🎉</button>
+    <div id="mascot" style="position:fixed;bottom:30px;right:30px;z-index:2001;display:flex;flex-direction:column;align-items:center;">
+        <div id="mascotChar" style="font-size:38px;">🤖</div>
+        <div id="mascotMsg" style="background:#fff;color:#1976d2;padding:6px 16px;border-radius:16px;margin-top:6px;box-shadow:0 2px 8px rgba(25,118,210,0.10);font-size:15px;display:none;">Halo, saya Maskot!</div>
+    </div>
+    <button id="quoteBtn" title="Motivasi" style="position:fixed;top:30px;right:30px;z-index:2001;background:#1976d2;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(25,118,210,0.10);">💡</button>
+    <div id="quoteBox" style="position:fixed;top:90px;right:30px;z-index:2001;display:none;background:#fff;color:#1976d2;padding:16px 24px;border-radius:16px;box-shadow:0 2px 16px rgba(25,118,210,0.12);font-size:1.08rem;font-weight:500;max-width:320px;min-width:180px;text-align:center;animation:fadeIn 0.5s;">Motivasi akan muncul di sini</div>
+    <button id="gameBtn" title="Mini Game" style="position:fixed;top:30px;left:30px;z-index:2001;background:#1976d2;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(25,118,210,0.10);">🎲</button>
+    <div id="gameBox" style="position:fixed;top:90px;left:30px;z-index:2001;display:none;background:#fff;color:#1976d2;padding:18px 24px;border-radius:16px;box-shadow:0 2px 16px rgba(25,118,210,0.12);font-size:1.08rem;font-weight:500;max-width:320px;min-width:180px;text-align:center;animation:fadeIn 0.5s;"></div>
+    <audio id="sfxPop" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9bfae2.mp3" preload="auto"></audio>
+    <audio id="sfxSuccess" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9bfae2.mp3" preload="auto"></audio>
+    <div id="pageLoader" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(25,118,210,0.08);z-index:4000;align-items:center;justify-content:center;">
+        <div style="border:6px solid #e3eaf5;border-top:6px solid #1976d2;border-radius:50%;width:48px;height:48px;animation:spin 1s linear infinite;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
